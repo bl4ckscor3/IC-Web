@@ -1,6 +1,8 @@
-<div class="brand">IgneousCraft</div>
-<div class="address-bar">A hybrid Minecraft server with fire!</div>
-
+<br>
+<div style="width:700px; margin:0 auto">
+	<img src="img/website_logo.png">
+</div>
+<br>
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
