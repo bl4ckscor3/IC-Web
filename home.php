@@ -9,25 +9,43 @@
 	    		<div class="col-lg-12 text-center">
 	    			<div id="slider" class="carousel slide">
 	    				<ol class="carousel-indicators hidden-xs">
-	    					<li data-target="#slider"" data-slide-to="0" class="active">
-	    					<li data-target="#slider"" data-slide-to="1">
-	    					<li data-target="#slider"" data-slide-to="2">
+	    					<li data-target="#slider" data-slide-to="0" class="active">
+	    					<?php 
+	    						$i = 2;
+								$files = scandir('res/slides');
+								
+	    						while($i < sizeof($files) - 1){
+	    							if($files[$i] == "..")
+	    							{
+	    								$i++;
+	    								continue;
+	    							}?>
+	    							
+	    							<li data-target="#slider" data-slide-to="<?php echo $i - 1;?>">
+	    					<?php 	$i++; 
+	    						}?>
 	    				</ol>
 	    				<div class="carousel-inner">
-	    					<div class="item active">
-	    						<img class="img-responsive img-full" src="res/slide-1.jpg">
-	    					</div>
-	    					<div class="item">
-	    						<img class="img-responsive img-full" src="res/slide-2.jpg">
-	    					</div>
-	    					<div class="item">
-	    						<img class="img-responsive img-full" src="res/slide-3.jpg">
-	    					</div>
+	    					<?php 
+	    						$i = 2;
+								
+	    						while($i < sizeof($files)){
+	    							if($files[$i] == "..")
+	    							{
+	    								$i++;
+	    								continue;
+	    							}?>
+	    							
+	    							<div class="item<?php echo $i == 2 ? " active" : ""?>">
+	    								<img class="img-responsive img-full" src="res/slides/<?php echo $files[$i];?>">
+	    							</div>
+	    					<?php 	$i++;
+	    						}?>
 	    				</div>
 	    				<a class="left carousel-control" href="#slider" data-slide="prev">
 	    					<span class="icon-prev"></span>
 	    				</a>
-	    				<a class="left carousel-control" href="#slider" data-slide="next">
+	    				<a class="right carousel-control" href="#slider" data-slide="next">
 	    					<span class="icon-next"></span>
 	    				</a>
 	    			</div>
