@@ -20,14 +20,14 @@
 	                    <hr>
 	                </div>
 	                <div class="col-sm-4 text-center">
-	                    <h3>Vauff<br>
-	                        <small>Server Owner</small><br>
+	                    <h3>bl4ckscor3<br>
+	                        <small>Co-Owner</small><br>
 	                        <small>Developer</small>
 	                    </h3>
 	                </div>
-	                <div class="col-sm-4 text-center">
-	                    <h3>bl4ckscor3<br>
-	                        <small>Co-Owner</small><br>
+					<div class="col-sm-4 text-center">
+	                    <h3>Vauff<br>
+	                        <small>Server Owner</small><br>
 	                        <small>Developer</small>
 	                    </h3>
 	                </div>
