@@ -45,7 +45,7 @@
 	                	</h3>
 	                </div>
 	                <div style="padding-top: 25px" class="col-sm-4 text-center">
-	                	<button class="btn btn-primary btn-lg" onclick="location.href='../applications/apply.html'">Apply for<br>Staff here</button>
+	                	<button class="btn btn-primary btn-lg" onclick="location.href='applications/apply.html'">Apply for<br>Staff here</button>
 	                </div>
 	                <div class="col-sm-4 text-center">
 	                	<h3>ExcelGamer<br>
