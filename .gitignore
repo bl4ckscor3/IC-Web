@@ -5,6 +5,7 @@
 !*IC-*
 !*IC-*/*
 !.gitignore
+!README.md
 
 # And exclude these again
 **/.settings
