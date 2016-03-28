@@ -16,10 +16,10 @@
 	$timestamp = time();
 	$username = $_POST['username'];
 	$age = $_POST['age'];
-	$servertime = $_POST['servertime'];
-	$experience = $_POST['experience'];
-	$why = $_POST['why'];
-	$additionalInfo = $_POST['additionalInfo'];
+	$servertime = nl2br($_POST['servertime']);
+	$experience = nl2br($_POST['experience']);
+	$why = nl2br($_POST['why']);
+	$additionalInfo = nl2br($_POST['additionalInfo']);
 	$apps = $mysql->query("select * from apps where username='".$username."' and timestamp >= '".($timestamp - 2629746)."'"); //get all apps in the past month from this user
 	
 	if(is_restricted($username))
@@ -110,7 +110,7 @@
 			}
 			else if($this->said == 2)
 			{
-				$this->send_data('PRIVMSG', '#IgneousCraftStaff :allicstaff, new moderator application by '.$_POST['username'].'! http://INSERTLINKHERE/app.php?id='.get_mysql()->query("select id from apps where username='".$_POST['username']."' order by timestamp asc")->fetch_assoc()['id']."&sort=down");
+				$this->send_data('PRIVMSG', '#IgneousCraftStaff :icstaff, new moderator application by '.$_POST['username'].'! http://INSERTLINKHERE/app.php?id='.get_mysql()->query("select id from apps where username='".$_POST['username']."' order by timestamp asc")->fetch_assoc()['id']."&sort=down");
 				$this->said = 3;
 			}
 			else if($this->said == 3)
