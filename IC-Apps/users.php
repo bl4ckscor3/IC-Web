@@ -74,7 +74,7 @@
 		<div id="content">
 			<div class="container">
 				<div class="jumbotron">
-			  		<button class="btn btn-default" onclick="location.href='applications.php'"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Go back</button>
+			  		<button class="btn btn-default" onclick="location.href='adminPanel.php'"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Go back</button>
 			  		<button class="btn btn-danger" onclick="location.href='logout.php'"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Logout</button>
 			  		<hr>
 			  		<div class="container">

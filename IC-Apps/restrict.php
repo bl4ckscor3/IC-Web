@@ -80,7 +80,9 @@
 		<div id="content">
 			<div class="container">
 				<div class="jumbotron">
-			  		<div class="btn-group">
+					<button class="btn btn-default" onclick="location.href='applications.php'"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Go back</button>
+					<br><br>
+					<div class="btn-group">
 			  			<button class="btn btn-danger" onclick="location.href='logout.php'"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Logout</button>
 			  			<button class="btn btn-warning" onclick="location.href='applications.php?hide=t'"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Apps</button>
 			  			<button type="button" class="btn btn-info" onclick="location.href='adminPanel.php'"><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> Admin panel</button>
