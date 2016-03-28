@@ -1,0 +1,201 @@
+<html>
+	<head>
+		<style type="text/css">
+			html, body
+			{
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			
+			#page-background
+			{
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			
+			#content
+			{
+				position: relative;
+				z-index: 1;
+				padding: 10px;
+			}
+			
+			textarea
+			{
+				resize: vertical;
+			}
+		</style>
+		
+		<title>IC - Apply</title>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="icon" type="image/png" href="http://breakinbad.net/favicon.png">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.css">
+		<link rel="stylesheet" href="css/jumbotron-narrow.css">
+	</head>
+	
+	<body>
+		<div id="page-background"><img src="res/background.png" width="100%" height="100%" alt="background"></div>
+	
+		<div id="content">
+			<div class="container">
+				<div class="jumbotron">
+					<h1>Application Form</h1>
+					<h4>
+						You can apply for a Moderator position on the IgneousCraft server right here.
+						<br>
+						If accepted, you will first become a T-Mod for 2 weeks and then we will judge whether you should become a full Mod. Promotions could occur later down the road.
+					</h4>
+					<br>
+					<small style="color: #ff0000;">* = Required</small>
+				</div>
+			</div>
+			<div class="container">
+				<div class="jumbotron">
+					<form id="form">
+						<div class="form-group">
+							<small style="color: #ff0000;">*</small> <label>Your Minecraft username:</label>
+							<h5>Make sure to type it correctly so we can promote your account if your application gets accepted.</h5>
+							<input class="form-control" type="text" id="username">
+							<br>
+							<div id="usernameInfo"></div>
+						</div>
+						<div class="form-group">
+							<small style="color: #ff0000;">*</small> <label>How old are you?</label>
+							<h5>You must be 14 or older. Do not lie about this or your application will be denied.</h5>
+							<input class="form-control" type="number" id="age">
+							<br>
+							<div id="ageInfo"></div>
+						</div>
+						<div class="form-group">
+							<small style="color: #ff0000;">*</small> <label>Tell us about your time on the server.</label><label>Have you enjoyed it? What have you accomplished on the server? Friendships made?</label>
+							<h5>There is a minimum of 1000 characters (approx ~175 words)</h5>
+							<textarea class="form-control" rows="5" id="servertime"></textarea>
+							<br>
+							<div id="servertimeInfo"></div>
+						</div>
+						<div class="form-group">
+							<small style="color: #ff0000;">*</small> <label>What experience do you have on other servers?</label>
+							<h5>It isn't required to have experience, however it will help your chances. Go into detail about what you've done previously. There is a minimum of 1000 characters (approx ~175 words)</h5>
+							<textarea class="form-control" rows="5" id="experience"></textarea>
+							<br>
+							<div id="experienceInfo"></div>
+						</div>
+						<div class="form-group">
+							<small style="color: #ff0000;">*</small> <label>Why do you think you would be a good addition to the staff team?</label>
+							<h5>There is a minimum of 2000 characters (approx ~350 words)</h5>
+							<textarea class="form-control" rows="10" id="why"></textarea>
+							<br>
+							<div id="whyInfo"></div>
+						</div>
+						<div class="form-group">
+							<label>Is there anything else you'd like to tell us (perhaps about you)?</label>
+							<br>
+							<textarea class="form-control" rows="5" id="additionalInfo"></textarea>
+						</div>
+						<div class="form-group has-feedback">
+							<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-check"></span> Submit</button>
+							<br><br>
+							<div id="buttonInfo"></div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#form").submit(function(e){
+					e.preventDefault();
+					
+					var username = $("#username").val();
+					var age = $("#age").val();
+					var experience = $("#experience").val();
+					var servertime = $("#servertime").val();
+					var why = $("#why").val();
+					var error = false;
+
+					if(!username) //if username is null
+					{
+						document.getElementById("usernameInfo").innerHTML = "<span class=\"label label-danger\">Please put in a username.</span>";
+						error = true;
+					}
+					else
+					{
+						document.getElementById("usernameInfo").innerHTML = "<span class=\"label label-success\">All fine!</span>";
+					}
+					
+					if(isNaN(age) || !age) //if it's not a number or null
+					{
+						document.getElementById("ageInfo").innerHTML = "<span class=\"label label-danger\">Please put in a valid number.</span>";
+						error = true;
+					}
+					else
+					{
+						document.getElementById("ageInfo").innerHTML = "<span class=\"label label-success\">All fine!</span>";
+					}	
+					//--------------------
+					if(servertime.length < 1000)
+					{
+						document.getElementById("servertimeInfo").innerHTML = "<span class=\"label label-danger\">Please put in at least 1000 characters which answer the question.</span>";
+						error = true;
+					}
+					else
+					{
+						document.getElementById("servertimeInfo").innerHTML = "<span class=\"label label-success\">All fine!</span>";
+					}
+					//--------------------
+					if(experience.length < 1000)
+					{
+						document.getElementById("experienceInfo").innerHTML = "<span class=\"label label-danger\">Please put in at least 1000 characters which answer the question.</span>";
+						error = true;
+					}
+					else
+					{
+						document.getElementById("experienceInfo").innerHTML = "<span class=\"label label-success\">All fine!</span>";
+					}
+					//--------------------
+					if(why.length < 2000)
+					{
+						document.getElementById("whyInfo").innerHTML = "<span class=\"label label-danger\">Please put in at least 2000 characters which answer the question.</span>";
+						error = true;
+					}
+					else
+					{
+						document.getElementById("whyInfo").innerHTML = "<span class=\"label label-success\">All fine!</span>";
+					}
+					//--------------------
+					if(error)
+					{
+						document.getElementById("buttonInfo").innerHTML = "<span class=\"label label-danger\">Please check if your inputs are valid.</span>";
+						return;
+					}
+					else
+					{
+						document.getElementById("buttonInfo").innerHTML = "<span class=\"label label-info\">Please wait a moment...</span>";
+					}
+
+					$.post("submit.php", {username: username, age: age, servertime: servertime, experience: experience, why: why, additionalInfo: $("#additionalInfo").val()}, function(data){
+						if(data == true)
+						{
+							location.href = "successful.html";
+						}
+						else
+						{
+							document.getElementById("buttonInfo").innerHTML = "<span class=\"label label-danger\">" + data + "</span>";
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
