@@ -33,17 +33,17 @@
 	                    </h3>
 	                </div>
 	                <div class="col-sm-3 text-center">
-	                    <h3>Build Team<br>
-	                        <small>BlackHawk8100</small><br>
-	                        <small>ExcelGamer</small><br>
-	                        <small>Vakonof</small>
-	                    </h3>
-	                </div>
-	                <div class="col-sm-3 text-center">
 	                    <h3>Developers<br>
 	                        <small>bl4ckscor3</small><br>
 	                        <small>Vauff</small><br>
 	                        <small>JustRamon</small>
+	                    </h3>
+	                </div>
+	                <div class="col-sm-3 text-center">
+	                    <h3>Build Team<br>
+	                        <small>BlackHawk8100</small><br>
+	                        <small>ExcelGamer</small><br>
+	                        <small>Vakonof</small>
 	                    </h3>
 	                </div>
 	                <br>
