@@ -19,24 +19,31 @@
 	                    <h2 class="intro-text text-center">Server <strong>Team</strong></h2>
 	                    <hr>
 	                </div>
-	                <div class="col-sm-4 text-center">
+	                <div class="col-sm-3 text-center">
 	                    <h3>Administrators<br>
 	                        <small>Vauff (Owner)</small><br>
 	                        <small>bl4ckscor3 (Co-Owner)</small><br>
 	                        <small>Vakonof (Admin)</small>
 	                    </h3>
 	                </div>
-	                <div class="col-sm-4 text-center">
+	                <div class="col-sm-3 text-center">
 	                    <h3>Moderators<br>
 	                        <small>JustRamon</small><br>
 	                        <small>ExcelGamer</small>
 	                    </h3>
 	                </div>
-	                <div class="col-sm-4 text-center">
+	                <div class="col-sm-3 text-center">
 	                    <h3>Build Team<br>
 	                        <small>BlackHawk8100</small><br>
 	                        <small>ExcelGamer</small><br>
 	                        <small>Vakonof</small>
+	                    </h3>
+	                </div>
+	                <div class="col-sm-3 text-center">
+	                    <h3>Developers<br>
+	                        <small>bl4ckscor3</small><br>
+	                        <small>Vauff</small><br>
+	                        <small>JustRamon</small>
 	                    </h3>
 	                </div>
 	                <br>
