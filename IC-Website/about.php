@@ -16,34 +16,36 @@
 	            <div class="box">
 	                <div class="col-lg-12">
 	                    <hr>
-	                    <h2 class="intro-text text-center">Server <strong>Team</strong></h2>
+	                    <div class="intro-text text-center">
+		                    <h2 class="intro-text">Server <strong>Team</strong></h2>
+		                </div>
 	                    <hr>
 	                </div>
 	                <div class="col-sm-3 text-center">
 	                    <h3>Administrators<br>
-	                        <small>Vauff (Owner)</small><br>
-	                        <small>bl4ckscor3 (Co-Owner)</small><br>
-	                        <small>Vakonof (Admin)</small>
+	                        <small><a href='vauff.php'>Vauff (Owner)</a></small><br>
+	                        <small><a href='bl4ckscor3.php'>bl4ckscor3 (Co-Owner)</a></small><br>
+	                        <small><a href='vakonof.php'>Vakonof (Admin)</a></small><br>
 	                    </h3>
 	                </div>
 	                <div class="col-sm-3 text-center">
 	                    <h3>Moderators<br>
-	                        <small>JustRamon</small><br>
-	                        <small>ExcelGamer</small>
+	                        <small><a href='justramon.php'>JustRamon</a></small><br>
+	                        <small><a href='excelgamer.php'>ExcelGamer</a></small>
 	                    </h3>
 	                </div>
 	                <div class="col-sm-3 text-center">
 	                    <h3>Developers<br>
-	                        <small>bl4ckscor3</small><br>
-	                        <small>Vauff</small><br>
-	                        <small>JustRamon</small>
+	                        <small><a href='bl4ckscor3.php'>bl4ckscor3</a></small><br>
+	                        <small><a href='vauff.php'>Vauff</a></small><br>
+	                        <small><a href='justramon.php'>JustRamon</a></small>
 	                    </h3>
 	                </div>
 	                <div class="col-sm-3 text-center">
 	                    <h3>Build Team<br>
-	                        <small>BlackHawk8100</small><br>
-	                        <small>ExcelGamer</small><br>
-	                        <small>Vakonof</small>
+	                        <small><a href='blackhawk8100.php'>BlackHawk8100</a></small><br>
+	                        <small><a href='excelgamer.php'>ExcelGamer</a></small><br>
+	                        <small><a href='vakonof.php'>Vakonof</a></small>
 	                    </h3>
 	                </div>
 	                <br>
